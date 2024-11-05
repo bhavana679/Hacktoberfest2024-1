@@ -1,0 +1,32 @@
+Given an integer, print whether that integer is a prime number or not.
+Input
+First line of input contains an integer T, showing the number of test cases. Every test case is a single integer A.
+
+Constraints
+1 <= T <= 100
+1 <= A <= 10^8
+Output
+If the given integer is prime, print 'Yes', else print 'No'.
+Example
+Sample Input
+3
+5
+9
+13
+
+Output
+Yes
+No
+Yes
+code:
+T= int(input())
+for i in range(1,T+1):
+    n=int(input())
+    count=0
+    for j in range(2,int(n**(1/2))+1):
+        if n%j==0:
+            count=count+1
+    if count==0:
+        print("Yes")
+    else:
+        print("No")
